@@ -59,11 +59,7 @@ class SliderBar extends Component {
             </Menu.Item>
           </Menu>
         </Sider>
-        
-    
-
-           
-
+               
     );
   }
 }

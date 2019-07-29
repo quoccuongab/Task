@@ -3,28 +3,14 @@ import './App.css';
 import 'antd/dist/antd.css';
 import { Layout, Menu, Icon,Input,Tooltip,Dropdown,Avatar  } from 'antd';
 import SliderBar from './component/SliderBar';
+import Headera from './component/Headera';
+import Contenta from './component/Contenta';
+import Footera from './component/Footera';
+
 
 const { Header, Content, Footer } = Layout;
 const { SubMenu } = Menu;
-const menu = (
-  <Menu>
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" >
-      Profile
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="#">
-        Setting
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="#">
-       Log out
-      </a>
-    </Menu.Item>
-  </Menu>
-);
+
 
 
 class App extends Component {
@@ -41,54 +27,19 @@ class App extends Component {
   render() {
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        <SliderBar/>
+               <SliderBar/>
 
-        <Layout>
+          <Layout>
 
- {/*Header */} <Header style={{ background: '#fff', padding: 0 }} >
-            
-            <Input 
-              style={{marginLeft:1000,width:300}}        
-                placeholder="Enter your username"             
-                suffix={
-                  <Tooltip title="Extra information">
-                    <Icon type="search" style={{ color: 'rgba(0,0,0,.45)' }} />
-                  </Tooltip>
-                  }
-                /> &nbsp;  &nbsp;
-                <span>   &nbsp; &nbsp; &nbsp;
-                    <Icon type="play-circle" />
+               <Headera/>
 
-                </span>  
-                <span>   &nbsp;  &nbsp;
-                      <Icon type="message" />
-                </span>
-              
-                <span>   &nbsp;  &nbsp;
-                <Icon type="notification" />
-                </span>   
-                <span>   &nbsp;  &nbsp;
-                | &nbsp;  &nbsp;  
-                </span>  
+               <Contenta/>
 
-                <Dropdown overlay={menu}>
-                  <a className="ant-dropdown-link"  >
-                    Demo User <Icon type="down" />
-                  </a>
-                </Dropdown>
-
-                <Avatar>USER</Avatar>
-  
-            </Header>
-            
- {/*Header */}            <Content style={{ margin: '0 16 px' }}>
-           
-           
-         . </Content>
+               <Footera/>
           
           
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-        </Layout>
+          </Layout>
+
       </Layout>
     );
   }
